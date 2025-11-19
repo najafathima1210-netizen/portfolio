@@ -1,37 +1,103 @@
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #2196F3; /* Blue */
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --text-color: #333;
+    --white-color: #fff;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1.5rem 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
 main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: var(--white-color);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 2rem;
     padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+#about p {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
 }
 
 #projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .project {
-    border: 1px solid #ccc;
-    padding: 1rem;
+    background-color: var(--white-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.project p {
+    font-size: 0.95rem;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 1rem 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    position: relative; /* Changed from fixed to relative for better content flow */
     width: 100%;
+    margin-top: 2rem;
 }
